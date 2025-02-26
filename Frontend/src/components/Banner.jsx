@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Banner() {
   return (
@@ -17,7 +18,7 @@ function Banner() {
             <p className="mb-5 text-2xl md:text-xl sm:text-lg">
             Discover a world of imagination, knowledge, and adventure with our curated selection of books. Whether you love thrilling mysteries, heartwarming romances, inspiring self-help guides, or timeless classics, there's something for every reader.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary"><Link className='text-xl' to='/Category'>Get Started</Link></button>
           </div>
         </div>
       </div>

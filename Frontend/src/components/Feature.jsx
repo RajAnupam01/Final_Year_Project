@@ -3,8 +3,8 @@ import React from 'react'
 function Feature() {
     return (
         <div className='px-4 flex flex-col sm:flex-row '>
-            <div className='flex sm:w-1/2 w-full sm:order-1 bg-red-600 justify-center p-24 '>
-                <div className="carousel rounded-box w-64 sm:w-96 shadow-2xl shadow-black">
+            <div className='flex sm:w-1/2 w-full sm:order-1  justify-center p-24 '>
+                <div className="carousel rounded-box min-w-60 sm:w-96 shadow-2xl shadow-black">
                     <div className="carousel-item w-full">
                         <img src="https://m.media-amazon.com/images/I/41an9tLSfBL._SL500_.jpg" />
                     </div>
@@ -28,9 +28,9 @@ function Feature() {
                     </div>
                 </div>
             </div>
-            <div className='flex sm:w-1/2 w-full sm:order-2 flex-col p-20 bg-red-600 justify-center'>
-                    <h1 className='text-6xl text-white font-bold'>Your Favorite Books in <br /> one place</h1>
-                    <p className='text-2xl text-white mt-10'>Books are a gateway to infinite worlds, a treasure trove of wisdom, and a lifelong companion in solitude and discovery.</p>
+            <div className='flex sm:w-1/2 w-full sm:order-2 flex-col p-20  justify-center'>
+                    <h1 className='text-4xl sm:text-6xl text-black font-bold'>Your Favorite Books in <br /> one place</h1>
+                    <p className='text-xl sm:text-2xl text-black mt-10'>Books are a gateway to infinite worlds, a treasure trove of wisdom, and a lifelong companion in solitude and discovery.</p>
             </div>
         </div>
     )

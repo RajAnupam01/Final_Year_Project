@@ -1,19 +1,23 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import Feature from './components/Feature'
-import Card from "./components/Card"
-import Footer from './components/Footer'
-
+import {Route,Routes} from "react-router-dom"
+import Landingpage from './FirstPage/landingpage'
+import Category from './secondPage/Category'
+import Contact from './ThirdPage/Contact'
+import About from './FourPage/About'
+import Login from './components/Login'
+import Signup from './components/SignUp'
 
 function App() {
   return (
     <>
-    <Navbar></Navbar>
-    <Banner></Banner>
-    <Feature></Feature>
-    <Card></Card>
-    <Footer></Footer>
+     <Routes>
+      <Route path='/' element = {<Landingpage></Landingpage>}></Route>
+      <Route path='/Category' element = {<Category></Category>}></Route>
+      <Route path='/Contact' element = {<Contact></Contact>}></Route>
+      <Route path='/About' element = {<About></About>}></Route>
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Signup" element={<Signup />} />
+     </Routes>
     </>
   )
 }
