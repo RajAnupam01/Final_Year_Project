@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Navbar() {
     const navItems = (
         <>
@@ -8,6 +9,7 @@ function Navbar() {
             <li><Link className='text-xl' to='/Category'>Category</Link></li>
             <li><Link className='text-xl' to='/contact'>Contact</Link></li>
             <li><Link className='text-xl' to='/about'>About</Link></li>
+            <li><Link className='text-xl' to='/Catalouge'>Catalouge</Link></li>
             
         </>
     );
@@ -16,7 +18,7 @@ function Navbar() {
         <div className=' fixed top-0 left-0 right-0 z-10'>
             <div className=" bg-base-100 px-4 flex justify-between items-center">
                 <div className="">
-                    <a className="text-2xl font-bold cursor-pointer">BookMart</a>
+                    <a className=" text-lg sm:text-2xl font-bold cursor-pointer">BookMart</a>
                 </div>
 
                 <div className="n hidden lg:flex ">
@@ -27,25 +29,14 @@ function Navbar() {
 
                 <div className="dropdown lg:hidden">
                     <div tabIndex={0} role="button" className="btn m-1">☰</div>
-                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-36 p-2 shadow">
                         {navItems}
                     </ul>
                 </div>
 
 
                 <div className='flex items-center space-x-10'>
-                <div className="">
-                    
-                <Link to="/Signup" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-400 transition cursor-pointer">Sign Up</Link>
-
-                </div>
-
-
-                <div className="">
-                    
-                <Link to="/Login" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-400 transition cursor-pointer">Login</Link>
-
-                </div>
+                 <button className='p-2 bg-blue-400 text-white text-lg sm:text-2xl font-bold cursor-pointer'>Logout</button>
                 </div>
             </div>
         </div>

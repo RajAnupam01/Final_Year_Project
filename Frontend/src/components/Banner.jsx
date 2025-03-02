@@ -7,7 +7,7 @@ function Banner() {
       <div
         className="hero min-h-screen sm:h-auto pt-20 p-4"
         style={{
-          backgroundImage: "url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJvb2tzfGVufDB8fDB8fHww)",
+          backgroundImage: "url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJvb2tzfGVufDB8fDB8fHww)", backgroundRepeat: "no-repeat"
         }}>
         <div className="hero-overlay bg-opacity-60 "></div>
         <div className="hero-content text-neutral-content text-center">

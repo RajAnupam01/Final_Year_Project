@@ -1,53 +1,62 @@
-import { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+
+    const [email,setEmail] = useState()
+    const [password,setPassword] = useState()
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Email:", email, "Password:", password);
-    };
-
-    return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 shadow-lg rounded-lg w-96">
-                <h2 className="text-2xl font-bold text-center mb-6">Login to BookMart</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Email</label>
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring focus:ring-blue-300"
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Password</label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                            className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring focus:ring-blue-300"
-                        />
-                    </div>
-
-                    <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">
-                        Login
-                    </button>
-                </form>
-
-                <p className="mt-4 text-center text-sm">
-                    Don't have an account? <a href="/signup" className="text-blue-600 hover:underline">Sign up</a>
-                </p>
-            </div>
+        e.preventDefault()
+        axios.post('http://localhost:3001/Login',{email,password})
+        .then(result => {console.log(result)
+            if(result.data === "Success"){
+                navigate('/Landingpage')
+            }
+        })
+        .catch(err => console.log(err))
+    }
+  return (
+    <div className='px-4 flex justify-center items-center min-h-screen '>
+        <div className='bg-white sm:p-24 p-5 rounded shadow-2xl shadow-black '>
+            <h2 className='text-center sm:text-5xl text-3xl font-bold sm:mb-10'>Login</h2>
+            <form onSubmit={handleSubmit} >
+                <div className='mb-5 '>
+                    <label htmlFor="email">
+                        <strong className='sm:text-xl text-lg'>Email</strong>
+                    </label>
+                    <input type="email" 
+                    placeholder='Enter Email'
+                    autoComplete='off'
+                    name='email'
+                    id='email'
+                    className='w-full rounded-0 sm:text-xl text-lg p-5'
+                    onChange={(e)=> setEmail(e.target.value)}
+                    />
+                </div>
+                 
+                 <div className='mb-5'>
+                    <label htmlFor="password">
+                        <strong className='sm:text-xl text-lg'>Password</strong>
+                    </label>
+                    <input type="password"
+                    placeholder='Enter Password'
+                    autoComplete='off'
+                    name='password'
+                    id='password'
+                    className='w-full rounded-0 sm:text-xl text-lg p-5'
+                    onChange={(e)=> setPassword(e.target.value)}
+                    />
+                 </div>
+                <button type='submit' className='bg-emerald-600 w-full sm:text-xl text-lg p-5'>Login</button>
+            </form>
+            <p className='text-center mt-2'>Don't have an account?</p>
         </div>
-    );
+    </div>
+  )
 }
 
-export default Login;
+export default Login

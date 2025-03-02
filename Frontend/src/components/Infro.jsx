@@ -3,7 +3,7 @@ import React from 'react'
 function Infro() {
   return (
     <div className='px-4'>
-      <section className="bg-blue-900 text-white min-h-screen flex items-center px-6 md:px-20">
+      <section className="bg-blue-900 text-white  flex items-center px-6 md:px-20 pt-60 pb-60">
         <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto w-full gap-10">
           <div className="md:w-3/5">
             <h2 className="text-5xl font-bold mb-6">About Our Bookstore</h2>

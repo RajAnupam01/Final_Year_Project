@@ -4,7 +4,7 @@ import {MapPinHouse,PhoneForwarded,Mail} from 'lucide-react'
 function Details() {
   return (
     <div className='px-4'>
-      <section className="bg-teal-800 pt-60 min-h-screen flex flex-col items-center">
+      <section className="bg-teal-800 pt-60  flex flex-col items-center pb-60 gap-x-10">
       <h2 className="text-white text-5xl font-bold text-center mb-10">GET IN TOUCH</h2>
       <div className="flex flex-col md:flex-row justify-center items-center gap-10 text-white max-w-6xl w-full">
         <div className="flex flex-col items-center text-center p-6">
