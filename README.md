@@ -6,7 +6,7 @@ BookMart is a full-stack online bookstore built using the MERN stack. It allows 
 
 - **MongoDB** - Database  
 - **Express.js** - Backend framework  
-- **React.js** - Frontend framework  
+- **React.js (vite)** - Frontend framework (Built with Vite for faster development).
 - **Node.js** - Backend runtime  
 - **Tailwind CSS** - Styling  
 
