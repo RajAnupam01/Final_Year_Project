@@ -28,5 +28,15 @@ BookMart is a full-stack online bookstore built using the MERN stack. It allows 
    ```sh
    git clone https://github.com/your-username/bookmart.git
    cd bookmart
-
+2. **Backend Setup
+   ```sh
+   cd Backend
+   npm install
+   npm start
+3. **Frontend Setup
+   ```sh
+   cd Frontend
+   npm install
+   npm run dev
+   
 This project is licensed under the MIT License.
